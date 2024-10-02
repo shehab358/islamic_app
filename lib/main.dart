@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_app/app_theme.dart';
 import 'package:islamic_app/main_screen.dart';
 
 void main() {
@@ -13,6 +14,8 @@ class IslamiApp extends StatelessWidget {
     return MaterialApp(
       routes: {MainScreen.route :(context)=> MainScreen()},
       initialRoute: MainScreen.route,
+      theme: AppTheme.lightTheme,
+
     );
   }
 }
