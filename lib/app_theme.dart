@@ -7,34 +7,51 @@ class AppTheme {
   static Color gold = const Color(0xffFACC1D);
   static Color black = const Color(0xff242424);
   static ThemeData lightTheme = ThemeData(
-      primaryColor: lightPrimary,
-      appBarTheme: AppBarTheme(
+    primaryColor: lightPrimary,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+        color: black,
         backgroundColor: Colors.transparent,
-        centerTitle: true,
-        titleTextStyle: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: black,
-          backgroundColor: Colors.transparent,
-        ),
       ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: lightPrimary,
-        selectedItemColor: black,
-        unselectedItemColor: white,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: lightPrimary,
+      selectedItemColor: black,
+      unselectedItemColor: white,
+    ),
+    textTheme: TextTheme(
+      headlineSmall: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
+        color: black,
       ),
-      textTheme: TextTheme(
-        headlineSmall: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w400,
-          color: black,
-        ),
-        titleLarge: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w400,
-          color: black,
-        ),
-      ));
+      headlineMedium: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
+        color: white,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+        color: black,
+      ),
+      displayMedium: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w600,
+        color: black,
+      ),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStateProperty.all<Color>(lightPrimary),
+        minimumSize: WidgetStateProperty.all<Size>(const Size(150, 50)),
+      ),
+    ),
+  );
   static ThemeData darkTheme = ThemeData();
 }
