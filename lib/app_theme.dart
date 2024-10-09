@@ -6,6 +6,7 @@ class AppTheme {
   static Color white = const Color(0xfff8f8f8);
   static Color gold = const Color(0xffFACC1D);
   static Color black = const Color(0xff242424);
+
   static ThemeData lightTheme = ThemeData(
     primaryColor: lightPrimary,
     appBarTheme: AppBarTheme(
@@ -36,7 +37,7 @@ class AppTheme {
         color: white,
       ),
       titleLarge: TextStyle(
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: FontWeight.w400,
         color: black,
       ),
@@ -48,10 +49,11 @@ class AppTheme {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all<Color>(lightPrimary),
+        backgroundColor: WidgetStateProperty.all<Color>(lightPrimary), 
         minimumSize: WidgetStateProperty.all<Size>(const Size(150, 50)),
       ),
     ),
   );
+
   static ThemeData darkTheme = ThemeData();
 }
