@@ -6,36 +6,8 @@ class AppTheme {
   static Color white = const Color(0xfff8f8f8);
   static Color gold = const Color(0xffFACC1D);
   static Color black = const Color(0xff242424);
+
   static ThemeData lightTheme = ThemeData(
-      primaryColor: lightPrimary,
-      appBarTheme: AppBarTheme(
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        titleTextStyle: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: black,
-          backgroundColor: Colors.transparent,
-        ),
-      ),
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: lightPrimary,
-        selectedItemColor: black,
-        unselectedItemColor: white,
-      ),
-      textTheme: TextTheme(
-        headlineSmall: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w400,
-          color: black,
-        ),
-        titleLarge: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w400,
-          color: black,
-        ),
-      ));
     primaryColor: lightPrimary,
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
@@ -65,7 +37,7 @@ class AppTheme {
         color: white,
       ),
       titleLarge: TextStyle(
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: FontWeight.w400,
         color: black,
       ),
@@ -77,10 +49,11 @@ class AppTheme {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all<Color>(lightPrimary),
+        backgroundColor: WidgetStateProperty.all<Color>(lightPrimary), 
         minimumSize: WidgetStateProperty.all<Size>(const Size(150, 50)),
       ),
     ),
-  );
+  ); // <-- Missing closing bracket for ThemeData here
+
   static ThemeData darkTheme = ThemeData();
 }
